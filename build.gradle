@@ -11,8 +11,9 @@ repositories {
 
 dependencies {
     implementation 'org.apache.groovy:groovy:4.0.2'
-    testImplementation platform('org.junit:junit-bom:5.9.1')
+    implementation 'org.spockframework:spock-core:+'
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
 }
 
 test {
