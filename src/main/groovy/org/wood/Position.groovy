@@ -1,23 +1,16 @@
 package org.wood
 
+import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
 
-import static org.wood.Constants.getBaseAscii
-
+@ToString
+@EqualsAndHashCode
 class Position {
-    boolean isStart = false
-    boolean isEnd = false
-    Integer elevation
+    int x
+    int y
 
-    Position(String letter) {
-        if (letter == 'S') {
-            isStart = true
-            elevation = 0
-        } else if (letter == 'E') {
-            isEnd = true
-            elevation = 25
-        } else {
-            elevation = 0 + (int) letter - baseAscii
-        }
+    Position(int x, int y) {
+        this.x = x
+        this.y = y
     }
-
 }
