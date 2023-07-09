@@ -5,10 +5,10 @@ import spock.lang.Specification
 class PositionSpec extends Specification {
     def 'constructs from letter'() {
         given:
-        Position position = new Position('a')
+        Position position = new Position(letter)
 
         expect:
-        position.elevation == 0
+        position.elevation == elevation
         position.isStart == false
         position.isEnd == false
 
@@ -16,7 +16,7 @@ class PositionSpec extends Specification {
         letter || elevation
         'a'    || 0
         'c'    || 2
-        'm'    || 14
+        'm'    || 12
         'z'    || 25
     }
 

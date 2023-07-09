@@ -16,7 +16,7 @@ class Position {
             isEnd = true
             elevation = 25
         } else {
-            elevation = 0 + baseAscii - (int) letter
+            elevation = 0 + (int) letter - baseAscii
         }
     }
 
